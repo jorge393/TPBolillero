@@ -29,22 +29,28 @@ namespace Bolillero.Core
         public void Reingresar()
         {
             Adentro.AddRange(Afuera);
-            Afuera.Clear;
+            Afuera.Clear();
         }
         public byte SacarBolilla()
         {
-            var bolilla = aleatorio.SacarBolilla(Adentro);
+            var bolilla = aleatorio.SacarBollilla(Adentro);
             Adentro.Remove(bolilla);
             Afuera.Add(bolilla);
             return bolilla;
         }
-        public bool Jugar(List<byte> num)
+        public bool Jugar(List<byte> jugada)
         {
-            
+            return jugada.TrueForAll(j => j == SacarBolilla());
         }
-        public long JugarN(List<byte> num)
+        public long JugarN(List<byte> jugada, long cantidad)
         {
-
+            int contador = 0;
+            for (int i = 0; i <  cantidad; i++)
+            {
+                if()
+            }
+                return contador;
+            }
         }
     }
 }
